@@ -1,10 +1,16 @@
 # AI-Native Org v2
 
-![Status](https://img.shields.io/badge/status-production--ready-success)
-![Tasks](https://img.shields.io/badge/tasks-10%20complete-blue)
-![Capabilities](https://img.shields.io/badge/capabilities-10%20deposited-blue)
+![Status](https://img.shields.io/badge/status-production--ready++-success)
+![Version](https://img.shields.io/badge/version-0.9.0-blue)
+![Tasks](https://img.shields.io/badge/tasks-75%20complete-blue)
+![Capabilities](https://img.shields.io/badge/capabilities-40%20deposited-blue)
+![Tests](https://img.shields.io/badge/tests-42%20passing-success)
+![Health](https://img.shields.io/badge/health-9.5%2F10-success)
 ![Quality](https://img.shields.io/badge/quality-100%25-success)
 ![License](https://img.shields.io/badge/license-MIT-blue)
+
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-purple)](CODE_OF_CONDUCT.md)
+[![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen)](CONTRIBUTING.md)
 
 一人公司 + AI agents 的极简运营系统，**通过强制能力沉淀实现 7.1 倍学习效率提升**。
 
@@ -43,10 +49,12 @@ AI agents 完成任务后，知识流失。传统框架沉淀率仅 14%，大量
 - ✅ **100% 质量**（自动化检查保障）
 
 ### 已验证
-- ✅ 10 任务完成（8 种类型）
-- ✅ 10 能力沉淀（5 skills + 2 data + 3 knowledge）
-- ✅ 系统健康度 8.1/10（生产就绪）
-- ✅ 6 小时从零到可用
+- ✅ 75 任务完成（自主迭代 25 个）
+- ✅ 40 能力沉淀（16 skills + 6 data + 15 knowledge + 3 system）
+- ✅ 系统健康度 9.5/10（6 个维度满分）
+- ✅ 42 个测试（100% 通过率）
+- ✅ 13 个自动化工具
+- ✅ 完整 CI/CD 流水线
 
 ---
 
@@ -209,3 +217,55 @@ MIT License - 自由使用、修改、分发
 **开始构建你的 AI 原生组织！** 🚀
 
 _Last update: 2026-06-12_
+
+---
+
+## 📚 文档
+
+- [快速开始](QUICKSTART.md) - 10 分钟上手指南
+- [常见问题](FAQ.md) - 40+ 问答
+- [最佳实践](docs/BEST_PRACTICES.md) - 使用建议
+- [故障排查](docs/TROUBLESHOOTING.md) - 问题解决
+- [进阶教程](docs/ADVANCED.md) - 深入使用
+- [变更日志](CHANGELOG.md) - 版本历史
+
+---
+
+## 🤝 贡献
+
+我们欢迎各种形式的贡献！
+
+- 📖 [贡献指南](CONTRIBUTING.md) - 如何参与
+- 👥 [贡献者名单](CONTRIBUTORS.md) - 感谢所有贡献者
+- 📜 [行为准则](CODE_OF_CONDUCT.md) - 社区规范
+
+**快速贡献**：
+1. 在 GitHub 上点击文档的 ✏️ 编辑按钮
+2. 修改后提交 - GitHub 会自动创建 PR
+3. 等待 review 和合并
+
+---
+
+## 📄 许可证
+
+本项目采用 [MIT License](LICENSE)。
+
+你可以自由地：
+- ✅ 商业使用
+- ✅ 修改
+- ✅ 分发
+- ✅ 私人使用
+
+只需保留版权和许可声明。
+
+---
+
+## 🌟 致谢
+
+- [Contributor Covenant](https://www.contributor-covenant.org/) - 行为准则模板
+- [Keep a Changelog](https://keepachangelog.com/) - 变更日志标准
+- 所有贡献者和使用者
+
+---
+
+**让我们一起打造 AI 原生组织！** 🚀
