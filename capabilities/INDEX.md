@@ -8,13 +8,13 @@
 
 ## 📊 统计
 
-- Skills: 5
-- Data: 2
-- Knowledge: 3
+- Skills: 6
+- Data: 3
+- Knowledge: 4
 
-**总计**：10 个能力资产 🎉
+**总计**：13 个能力资产 🎉
 
-**本周新增**：10  
+**本周新增**：13  
 **本周复用**：8+
 
 ---
@@ -28,6 +28,7 @@
 - [problem-driven-development](skill/problem-driven-development.md) - 问题驱动开发：调试→修复→沉淀循环
 - [launch-preparation](skill/launch-preparation.md) - 产品/项目外部发布准备流程
 - [quality-check-automation](skill/quality-check-automation.md) - 自动化质量检查系统构建
+- [readme-optimization](skill/readme-optimization.md) - 项目 README 优化（徽章、价值主张、CTA）
 
 ---
 
@@ -37,6 +38,7 @@
 
 - [product-brief-template](data/product-brief-template.md) - 产品 brief 标准模板
 - [contributing-guide-template](data/contributing-guide-template.md) - 开源项目贡献指南模板
+- [roadmap-template](data/roadmap-template.md) - 产品路线图模板（透明度与灵活性平衡）
 
 ---
 
@@ -47,6 +49,7 @@
 - [org-design-decisions](knowledge/org-design-decisions.md) - 从 org-blueprint 学到的组织设计决策
 - [cross-platform-bash-compatibility](knowledge/cross-platform-bash-compatibility.md) - Bash 脚本跨平台兼容性（macOS/Linux）
 - [competitor-analysis-ai-org-frameworks](knowledge/competitor-analysis-ai-org-frameworks.md) - AI 原生组织框架竞品分析
+- [github-actions-best-practices](knowledge/github-actions-best-practices.md) - GitHub Actions CI/CD 最佳实践（质量门禁设计）
 
 ---
 
