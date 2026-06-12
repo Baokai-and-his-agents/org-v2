@@ -139,3 +139,12 @@
 
 _最后更新：2026-06-13_  
 _35/35+ 目标达成 🎊_
+
+---
+
+## 🆕 任务 056-059 新增（2026-06-13）
+
+### Knowledge (2)
+- [self-learning-mechanism](knowledge/self-learning-mechanism.md) - AI Agent 自我学习机制（任务 056）
+- [community-example-patterns](knowledge/community-example-patterns.md) - 社区示例编写模式（任务 059）
+
