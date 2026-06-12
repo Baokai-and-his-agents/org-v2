@@ -41,4 +41,4 @@
 **建议**：运行 `bash ops/scripts/sync-capability-index.sh` 自动修复同步问题
 
 ---
-_报告生成时间：Sat Jun 13 03:29:27 CST 2026_
+_报告生成时间：Sat Jun 13 03:29:42 CST 2026_
