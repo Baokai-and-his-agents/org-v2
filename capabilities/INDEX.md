@@ -10,10 +10,10 @@
 
 - Skills: 3
 - Data: 1
-- Knowledge: 2
+- Knowledge: 3
 
-**本周新增**：6  
-**本周复用**：5
+**本周新增**：7  
+**本周复用**：6
 
 ---
 
@@ -41,6 +41,7 @@
 
 - [org-design-decisions](knowledge/org-design-decisions.md) - 从 org-blueprint 学到的组织设计决策
 - [cross-platform-bash-compatibility](knowledge/cross-platform-bash-compatibility.md) - Bash 脚本跨平台兼容性（macOS/Linux）
+- [competitor-analysis-ai-org-frameworks](knowledge/competitor-analysis-ai-org-frameworks.md) - AI 原生组织框架竞品分析
 
 ---
 
