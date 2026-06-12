@@ -9,40 +9,43 @@
 
 1. ✅ 建立 AI 原生组织的最小可运行系统
 2. ✅ 证明 3 个核心循环可行：任务执行 → 能力沉淀 → 度量反馈
-3. 🚀 开始产品验证：用 org-v2 运行 2 周
+3. 🚀 深化验证：完成 10+ 任务，积累 10+ 能力
+
+**Phase 2 进行中**：多样化场景测试
 
 ---
 
-## 📋 活跃任务 (0)
+## 📋 活跃任务 (1)
 
-**已完成 3 个任务**：
-- ✅ 001-bootstrap-validation（系统初始化）
-- ✅ 002-duty-agent-implementation（巡检机制）
-- ✅ 003-first-product-brief（产品方向）
+**进行中**：
+- [005-real-world-scenarios](ops/tasks/005-real-world-scenarios.md) - 真实场景测试（研究/开发/运营）
+
+**部分完成**：
+- ⚠️ [004-automate-duty-check](ops/tasks/004-automate-duty-check.md) - 本地成功，CI 待调试
 
 ---
 
 ## ⚠️ 阻塞 (0)
 
-无
+无（task 004 暂时搁置，不阻塞进度）
 
 ---
 
 ## 📊 本周进度
 
-- **完成任务**：3
-- **沉淀能力**：4 (2 skills + 1 data + 1 knowledge)
-- **产品**：1（AI-Native Org Toolkit，进入 Validation）
-- **Agent 工作时长**：~1.5h
-- **Duty 巡检**：1 次
-- **Git 提交**：9 次
-- **沉淀率**：133% (4/3)
+- **完成任务**：3（bootstrap, duty-implementation, product-brief）
+- **部分完成**：1（automate-duty-check，本地成功）
+- **沉淀能力**：6 (3 skills + 1 data + 2 knowledge)
+- **产品**：1（AI-Native Org Toolkit，Validation）
+- **Git 提交**：19 次
+- **Duty 巡检**：4 次（手动触发）
+- **沉淀率**：150% (6/4)
 
 **关键成果**：
-- ✅ 核心结构搭建完成
-- ✅ 3 个核心循环验证可行
-- ✅ 第一个产品进入验证阶段
-- ✅ GitHub 仓库公开：https://github.com/Baokai-and-his-agents/org-v2
+- ✅ 核心循环验证完成
+- ✅ 跨平台兼容性问题解决
+- ✅ 问题驱动开发模式验证
+- 🚀 准备多样化场景测试
 
 ---
 
