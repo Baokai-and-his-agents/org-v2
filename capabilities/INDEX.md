@@ -8,12 +8,14 @@
 
 ## 📊 统计
 
-- Skills: 3
-- Data: 1
+- Skills: 5
+- Data: 2
 - Knowledge: 3
 
-**本周新增**：7  
-**本周复用**：6
+**总计**：10 个能力资产 🎉
+
+**本周新增**：10  
+**本周复用**：8+
 
 ---
 
@@ -24,6 +26,8 @@
 - [org-bootstrap](skill/org-bootstrap.md) - 从零搭建 AI 原生组织的完整流程
 - [duty-check](skill/duty-check.md) - Duty Agent 定期巡检和 heartbeat 生成
 - [problem-driven-development](skill/problem-driven-development.md) - 问题驱动开发：调试→修复→沉淀循环
+- [launch-preparation](skill/launch-preparation.md) - 产品/项目外部发布准备流程
+- [quality-check-automation](skill/quality-check-automation.md) - 自动化质量检查系统构建
 
 ---
 
@@ -32,6 +36,7 @@
 > 样本、模板、价格表、竞品库
 
 - [product-brief-template](data/product-brief-template.md) - 产品 brief 标准模板
+- [contributing-guide-template](data/contributing-guide-template.md) - 开源项目贡献指南模板
 
 ---
 
