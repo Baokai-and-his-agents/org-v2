@@ -4,6 +4,13 @@
 
 set -e
 
+# 检测操作系统
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    IS_LINUX=true
+else
+    IS_LINUX=false
+fi
+
 HEARTBEAT_DATE=$(date +%Y-%m-%d-%H%M)
 HEARTBEAT_FILE="ops/heartbeats/${HEARTBEAT_DATE}.md"
 
@@ -30,8 +37,12 @@ cat > "$HEARTBEAT_FILE" << 'HEADER'
 
 HEADER
 
-# 使用变量替换
-sed -i '' "s/\$(date +\"%Y-%m-%d %H:%M\")/$(date +"%Y-%m-%d %H:%M")/g" "$HEARTBEAT_FILE"
+# 使用变量替换（兼容 Linux 和 macOS）
+if [ "$IS_LINUX" = true ]; then
+    sed -i "s/\$(date +\"%Y-%m-%d %H:%M\")/$(date +"%Y-%m-%d %H:%M")/g" "$HEARTBEAT_FILE"
+else
+    sed -i '' "s/\$(date +\"%Y-%m-%d %H:%M\")/$(date +"%Y-%m-%d %H:%M")/g" "$HEARTBEAT_FILE"
+fi
 
 # 检查 1: NOW.md 任务状态
 echo "## ✅ 检查结果" >> "$HEARTBEAT_FILE"
