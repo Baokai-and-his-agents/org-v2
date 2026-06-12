@@ -8,12 +8,12 @@
 
 ## 📊 统计
 
-- Skills: 1
+- Skills: 2
 - Data: 0
 - Knowledge: 1
 
-**本周新增**：2  
-**本周复用**：1
+**本周新增**：3  
+**本周复用**：2
 
 ---
 
@@ -22,6 +22,7 @@
 > 可重复执行的流程、检查清单、脚本
 
 - [org-bootstrap](skill/org-bootstrap.md) - 从零搭建 AI 原生组织的完整流程
+- [duty-check](skill/duty-check.md) - Duty Agent 定期巡检和 heartbeat 生成
 
 ---
 
