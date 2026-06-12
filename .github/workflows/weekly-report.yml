@@ -1,0 +1,39 @@
+name: Weekly Report
+on:
+  schedule:
+    # 每周五 09:00 (UTC+0)
+    - cron: '0 1 * * 5'
+  workflow_dispatch:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整历史用于 git log 分析
+
+      - name: Generate weekly report
+        run: |
+          bash ops/scripts/weekly-report.sh
+
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ops/reports/
+          git commit -m "Add weekly report $(date +%Y-%m-%d)" || echo "No changes"
+          git push
+
+      - name: Update NOW.md
+        run: |
+          # 提取本周数据更新 NOW.md
+          TASKS=$(git log --since="7 days ago" --grep="Complete\|完成" --oneline | wc -l)
+          SKILLS=$(git log --since="7 days ago" --name-only --pretty=format: -- capabilities/ | grep -v "^$" | wc -l)
+
+          sed -i "s/- 完成：.*/- 完成：$TASKS/" NOW.md
+          sed -i "s/- 沉淀能力：.*/- 沉淀能力：$SKILLS/" NOW.md
+
+          git add NOW.md
+          git commit -m "Update NOW.md with weekly stats" || echo "No changes"
+          git push

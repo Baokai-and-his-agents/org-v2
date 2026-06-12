@@ -1,0 +1,64 @@
+name: Check Structure
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check required files
+        run: |
+          echo "检查核心文件..."
+
+          REQUIRED_FILES=(
+            "NOW.md"
+            "control/owner.md"
+            "ops/agent-protocol.md"
+            "capabilities/INDEX.md"
+            "products/portfolio.md"
+          )
+
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ 缺少必需文件: $file"
+              exit 1
+            else
+              echo "✅ $file"
+            fi
+          done
+
+      - name: Check capabilities INDEX sync
+        run: |
+          echo "检查能力资产索引..."
+
+          # 统计实际文件数
+          ACTUAL_SKILLS=$(find capabilities/skill/ -name "*.md" 2>/dev/null | wc -l)
+          ACTUAL_DATA=$(find capabilities/data/ -name "*.md" 2>/dev/null | wc -l)
+          ACTUAL_KNOWLEDGE=$(find capabilities/knowledge/ -name "*.md" 2>/dev/null | wc -l)
+
+          # 从 INDEX.md 提取声明的数量
+          DECLARED_SKILLS=$(grep "Skills:" capabilities/INDEX.md | grep -oE "[0-9]+")
+          DECLARED_DATA=$(grep "Data:" capabilities/INDEX.md | grep -oE "[0-9]+")
+          DECLARED_KNOWLEDGE=$(grep "Knowledge:" capabilities/INDEX.md | grep -oE "[0-9]+")
+
+          echo "Skills: $ACTUAL_SKILLS (实际) vs $DECLARED_SKILLS (声明)"
+          echo "Data: $ACTUAL_DATA (实际) vs $DECLARED_DATA (声明)"
+          echo "Knowledge: $ACTUAL_KNOWLEDGE (实际) vs $DECLARED_KNOWLEDGE (声明)"
+
+          # 目前只警告，不阻止提交
+          if [ "$ACTUAL_SKILLS" != "$DECLARED_SKILLS" ]; then
+            echo "⚠️ Skills 数量不匹配，请更新 INDEX.md"
+          fi
+
+      - name: Check markdown format
+        run: |
+          echo "检查 Markdown 格式..."
+
+          # 检查是否有无效链接（基础检查）
+          find . -name "*.md" -exec grep -H "\]()" {} \; | head -10 && \
+            echo "⚠️ 发现空链接" || \
+            echo "✅ 链接格式正常"
