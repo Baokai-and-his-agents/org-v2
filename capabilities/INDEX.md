@@ -70,3 +70,13 @@
 - 明确过时 → 直接删除
 
 记录删除原因到 `capabilities/CHANGELOG.md`
+
+---
+
+## 🆕 Phase 5+ 新增能力（2026-06-13）
+
+### Skills
+- [unit-testing-framework](skill/unit-testing-framework.md) - 自动化单元测试框架构建方法
+
+### Knowledge
+- [autonomous-iteration-strategy](knowledge/autonomous-iteration-strategy.md) - AI Agent 自主迭代策略与经验
