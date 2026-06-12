@@ -6,6 +6,41 @@ org-v2 是一个 AI 原生组织框架，由社区驱动。我们欢迎各种形
 
 ---
 
+## ⚡ 快速开始
+
+**第一次贡献？** 5 分钟快速上手：
+
+### 方式 1：文档改进（最简单）
+
+1. 在 GitHub 上找到要改的文档
+2. 点击右上角 ✏️（编辑）按钮
+3. 直接修改，GitHub 会自动 fork 和创建 PR
+4. 填写简短说明，提交！
+
+**适合**：修正错别字、补充说明、优化表达
+
+### 方式 2：报告问题
+
+发现 Bug 或有新想法？
+
+1. 访问 [Issues](https://github.com/Baokai-and-his-agents/org-v2/issues)
+2. 点击 "New Issue"
+3. 选择模板（Bug Report / Feature Request）
+4. 填写详细信息，提交！
+
+**提示**：详细的描述 = 更快的解决
+
+### 方式 3：分享经验
+
+用过 org-v2？分享你的经验！
+
+1. 访问 [Discussions](https://github.com/Baokai-and-his-agents/org-v2/discussions)
+2. 选择 "Show and tell" 分类
+3. 写下你的使用心得、案例、教程
+4. 帮助其他用户！
+
+---
+
 ## 🤝 贡献方式
 
 ### 1. 代码贡献
@@ -293,10 +328,89 @@ PR 提交后：
 
 ---
 
-## ❓ 问题？
+## ❓ 常见问题
+
+### Q1: 我不会编程，能贡献吗？
+
+**A**: 当然可以！你可以：
+- 改进文档（修正错误、补充说明）
+- 报告问题（描述你遇到的 Bug）
+- 分享经验（写使用教程、案例）
+- 提供反馈（告诉我们哪里不好用）
+
+这些都是非常有价值的贡献！
+
+### Q2: 我的 PR 多久会被 review？
+
+**A**: 通常 1-3 天内会有初步反馈。
+
+- 简单 PR（文档、小 fix）：可能几小时内
+- 复杂 PR（新功能、大改动）：可能需要更多讨论
+
+如果超过 3 天没有回应，可以礼貌地 ping 一下。
+
+### Q3: 我应该先开 Issue 还是直接提 PR？
+
+**A**: 取决于改动大小：
+
+- **小改动**（文档错误、明显的 bug）→ 直接提 PR
+- **大改动**（新功能、重构）→ 先开 Issue 讨论
+
+这样可以避免白费功夫。
+
+### Q4: Commit Message 写错了怎么办？
+
+**A**: 如果还没 push：
+```bash
+git commit --amend -m "correct: message"
+```
+
+如果已经 push 了也没关系，review 时可以 squash commits。
+
+### Q5: 我的 PR 被要求修改，怎么办？
+
+**A**: 这很正常！步骤：
+
+1. 在本地修改代码
+2. 提交新的 commit
+3. Push 到同一个分支
+4. PR 会自动更新
+
+不需要关闭重开 PR。
+
+### Q6: 可以一次提交多个不相关的改动吗？
+
+**A**: 最好不要。建议：
+
+- 一个 PR 解决一个问题
+- 多个问题 = 多个 PR
+- 这样 review 更快，合并更容易
+
+### Q7: 我想贡献但不知道做什么？
+
+**A**: 几个建议：
+
+1. 看 [Issues](https://github.com/Baokai-and-his-agents/org-v2/issues) 中标记 `good first issue` 的
+2. 完善现有文档（补充示例、优化表达）
+3. 写使用教程（分享你的实践）
+4. 试用系统并报告问题
+
+### Q8: 贡献会被记录吗？
+
+**A**: 会！
+
+- GitHub 自动记录所有贡献者
+- 我们会维护 CONTRIBUTORS.md
+- 重要贡献会在 CHANGELOG 中提及
+
+你的名字会出现在贡献者列表中。
+
+---
+
+## ❓ 更多问题？
 
 如有疑问：
-1. 先查看 [FAQ](docs/FAQ.md)
+1. 先查看 [FAQ](FAQ.md)
 2. 搜索 [Issues](https://github.com/Baokai-and-his-agents/org-v2/issues)
 3. 提新 Issue（使用 question 模板）
 4. 在 [Discussions](https://github.com/Baokai-and-his-agents/org-v2/discussions) 提问
