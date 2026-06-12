@@ -1,0 +1,38 @@
+name: Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run capability quality check
+      run: bash ops/scripts/check-capabilities.sh
+      
+    - name: Run unit tests
+      run: bash ops/tests/test-capability-quality.sh
+      
+    - name: Run integration tests
+      run: bash ops/tests/integration/test-workflow-integration.sh
+      
+    - name: Run performance benchmarks
+      run: bash ops/tests/performance/benchmark-tools.sh
+      
+    - name: Calculate health score
+      run: bash ops/scripts/calculate-health-score.sh
+      
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: |
+          ops/reports/
