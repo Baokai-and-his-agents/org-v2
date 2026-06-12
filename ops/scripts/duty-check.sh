@@ -4,11 +4,12 @@
 
 set -e
 
-# 检测操作系统
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    IS_LINUX=true
-else
-    IS_LINUX=false
+# 确保在正确的目录
+if [ ! -d "ops/heartbeats" ]; then
+    echo "❌ Error: ops/heartbeats directory not found"
+    echo "Current directory: $(pwd)"
+    echo "Please run from repository root"
+    exit 1
 fi
 
 HEARTBEAT_DATE=$(date +%Y-%m-%d-%H%M)

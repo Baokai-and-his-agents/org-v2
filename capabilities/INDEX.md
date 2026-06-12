@@ -8,12 +8,12 @@
 
 ## 📊 统计
 
-- Skills: 2
+- Skills: 3
 - Data: 1
 - Knowledge: 2
 
-**本周新增**：5  
-**本周复用**：4
+**本周新增**：6  
+**本周复用**：5
 
 ---
 
@@ -23,6 +23,7 @@
 
 - [org-bootstrap](skill/org-bootstrap.md) - 从零搭建 AI 原生组织的完整流程
 - [duty-check](skill/duty-check.md) - Duty Agent 定期巡检和 heartbeat 生成
+- [problem-driven-development](skill/problem-driven-development.md) - 问题驱动开发：调试→修复→沉淀循环
 
 ---
 
