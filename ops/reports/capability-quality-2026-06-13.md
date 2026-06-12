@@ -1,6 +1,6 @@
 # 能力资产质量报告
 
-**检查时间**：2026-06-13 04:47
+**检查时间**：2026-06-13 04:49
 
 ---
 
@@ -12,9 +12,9 @@
 |------|------|------|------|
 | Skills | 14 | 0 | ⚠️ 不一致 |
 | Data | 6 | 0 | ⚠️ 不一致 |
-| Knowledge | 12 | 0 | ⚠️ 不一致 |
+| Knowledge | 13 | 0 | ⚠️ 不一致 |
 
-**总计**：32 个能力资产
+**总计**：33 个能力资产
 
 ---
 
@@ -42,6 +42,7 @@
 - ⚠️ `capabilities/knowledge/github-actions-best-practices.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/milestone-review-process.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/phase-progression-insights.md`: 缺少示例或使用记录
+- ⚠️ `capabilities/knowledge/self-learning-mechanism.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/tool-chain-design-insights.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/troubleshooting-documentation.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/use-case-documentation.md`: 缺少示例或使用记录
@@ -58,11 +59,11 @@
 
 ⚠️ **健康状态**：需要改进
 
-发现 28 个问题：
+发现 29 个问题：
 - 同步问题：3 个
-- 格式问题：25 个
+- 格式问题：26 个
 
 **建议**：运行 `bash ops/scripts/sync-capability-index.sh` 自动修复同步问题
 
 ---
-_报告生成时间：Sat Jun 13 04:47:13 CST 2026_
+_报告生成时间：Sat Jun 13 04:49:30 CST 2026_
