@@ -1,6 +1,6 @@
 # 能力资产质量报告
 
-**检查时间**：2026-06-13 05:04
+**检查时间**：2026-06-13 05:15
 
 ---
 
@@ -10,16 +10,17 @@
 
 | 类型 | 实际 | 声明 | 状态 |
 |------|------|------|------|
-| Skills | 15 | 0 | ⚠️ 不一致 |
+| Skills | 16 | 0 | ⚠️ 不一致 |
 | Data | 6 | 0 | ⚠️ 不一致 |
 | Knowledge | 15 | 0 | ⚠️ 不一致 |
 
-**总计**：36 个能力资产
+**总计**：37 个能力资产
 
 ---
 
 ## 🔍 格式检查
 
+- ⚠️ `capabilities/skill/capability-analytics.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/capability-export-tool.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/capability-import-tool.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/capability-search-tool.md`: 缺少示例或使用记录
@@ -62,11 +63,11 @@
 
 ⚠️ **健康状态**：需要改进
 
-发现 32 个问题：
+发现 33 个问题：
 - 同步问题：3 个
-- 格式问题：29 个
+- 格式问题：30 个
 
 **建议**：运行 `bash ops/scripts/sync-capability-index.sh` 自动修复同步问题
 
 ---
-_报告生成时间：Sat Jun 13 05:04:26 CST 2026_
+_报告生成时间：Sat Jun 13 05:15:50 CST 2026_
