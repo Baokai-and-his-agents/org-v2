@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Baokai-and-his-agents/org-v2/discussions
+    about: 用于一般讨论、展示项目、分享经验
+  - name: 📖 Documentation
+    url: https://github.com/Baokai-and-his-agents/org-v2/blob/main/README.md
+    about: 查看完整文档

@@ -6,32 +6,31 @@ labels: question
 assignees: ''
 ---
 
-## 问题
+## ❓ 问题
 
-_你的问题是什么？_
+清晰描述你的问题。
 
-## 已尝试
+## 📖 已查看的文档
 
-_你已经尝试了什么？查看了哪些文档？_
+请列出你已经查看过的文档：
 
-- [ ] 阅读了 README
-- [ ] 阅读了 QUICKSTART
-- [ ] 查看了 FAQ
-- [ ] 搜索了现有 Issues
-- [ ] 查看了源代码
+- [ ] README.md
+- [ ] QUICKSTART.md
+- [ ] FAQ.md
+- [ ] CONTRIBUTING.md
+- [ ] docs/BEST_PRACTICES.md
+- [ ] docs/TROUBLESHOOTING.md
 
-## 背景
+## 🔍 已搜索
 
-_你想做什么？遇到什么困难？_
+- [ ] 我已搜索现有 Issues
+- [ ] 我已搜索 Discussions
 
-## 期望的答案形式
+## 📝 详细说明
 
-- [ ] 是/否答案
-- [ ] 步骤指南
-- [ ] 示例代码
-- [ ] 概念解释
-- [ ] 其他
+提供更多背景信息，帮助我们理解你的问题。
 
-## 额外信息
+## 💻 环境（如相关）
 
-_其他有助于回答的信息_
+- **OS**: [e.g. macOS, Linux]
+- **使用场景**: [e.g. 个人项目, 团队使用]
