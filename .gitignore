@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Logs (keep structure, ignore large files)
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Secrets (if accidentally created)
+.env
+secrets/
+*.key
+*.pem
+
+# Build artifacts (if added later)
+dist/
+build/
+*.pyc
+__pycache__/
