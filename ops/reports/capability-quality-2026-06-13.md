@@ -1,6 +1,6 @@
 # 能力资产质量报告
 
-**检查时间**：2026-06-13 04:53
+**检查时间**：2026-06-13 04:59
 
 ---
 
@@ -10,11 +10,11 @@
 
 | 类型 | 实际 | 声明 | 状态 |
 |------|------|------|------|
-| Skills | 14 | 0 | ⚠️ 不一致 |
+| Skills | 15 | 0 | ⚠️ 不一致 |
 | Data | 6 | 0 | ⚠️ 不一致 |
-| Knowledge | 13 | 0 | ⚠️ 不一致 |
+| Knowledge | 14 | 0 | ⚠️ 不一致 |
 
-**总计**：33 个能力资产
+**总计**：35 个能力资产
 
 ---
 
@@ -26,6 +26,7 @@
 - ⚠️ `capabilities/skill/duty-check-automation.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/github-repo-setup.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/health-score-calculator.md`: 缺少示例或使用记录
+- ⚠️ `capabilities/skill/monthly-report-automation.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/readme-optimization.md`: 缺少用途部分
 - ⚠️ `capabilities/skill/readme-optimization.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/skill/unit-testing-framework.md`: 缺少示例或使用记录
@@ -38,6 +39,7 @@
 - ⚠️ `capabilities/knowledge/advanced-tutorial-documentation.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/autonomous-iteration-strategy.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/best-practices-documentation.md`: 缺少示例或使用记录
+- ⚠️ `capabilities/knowledge/community-example-patterns.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/github-actions-best-practices.md`: 缺少用途部分
 - ⚠️ `capabilities/knowledge/github-actions-best-practices.md`: 缺少示例或使用记录
 - ⚠️ `capabilities/knowledge/milestone-review-process.md`: 缺少示例或使用记录
@@ -59,11 +61,11 @@
 
 ⚠️ **健康状态**：需要改进
 
-发现 29 个问题：
+发现 31 个问题：
 - 同步问题：3 个
-- 格式问题：26 个
+- 格式问题：28 个
 
 **建议**：运行 `bash ops/scripts/sync-capability-index.sh` 自动修复同步问题
 
 ---
-_报告生成时间：Sat Jun 13 04:53:15 CST 2026_
+_报告生成时间：Sat Jun 13 04:59:03 CST 2026_
