@@ -10,10 +10,10 @@
 
 - Skills: 2
 - Data: 1
-- Knowledge: 1
+- Knowledge: 2
 
-**本周新增**：4  
-**本周复用**：3
+**本周新增**：5  
+**本周复用**：4
 
 ---
 
@@ -39,6 +39,7 @@
 > 决策依据、失败教训、成功案例
 
 - [org-design-decisions](knowledge/org-design-decisions.md) - 从 org-blueprint 学到的组织设计决策
+- [cross-platform-bash-compatibility](knowledge/cross-platform-bash-compatibility.md) - Bash 脚本跨平台兼容性（macOS/Linux）
 
 ---
 

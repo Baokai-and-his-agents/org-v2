@@ -13,15 +13,16 @@ fi
 
 HEARTBEAT_DATE=$(date +%Y-%m-%d-%H%M)
 HEARTBEAT_FILE="ops/heartbeats/${HEARTBEAT_DATE}.md"
+CURRENT_TIME=$(date +"%Y-%m-%d %H:%M")
 
 echo "🔍 开始 Duty Agent 巡检..."
 echo ""
 
 # 创建 heartbeat 文件
-cat > "$HEARTBEAT_FILE" << 'HEADER'
+cat > "$HEARTBEAT_FILE" << EOF
 # Duty Agent Heartbeat
 
-**时间**：$(date +"%Y-%m-%d %H:%M")
+**时间**：${CURRENT_TIME}
 **执行者**：Duty Agent
 
 ---
@@ -35,14 +36,7 @@ cat > "$HEARTBEAT_FILE" << 'HEADER'
 
 ---
 
-HEADER
-
-# 使用变量替换（兼容 Linux 和 macOS）
-if [ "$IS_LINUX" = true ]; then
-    sed -i "s/\$(date +\"%Y-%m-%d %H:%M\")/$(date +"%Y-%m-%d %H:%M")/g" "$HEARTBEAT_FILE"
-else
-    sed -i '' "s/\$(date +\"%Y-%m-%d %H:%M\")/$(date +"%Y-%m-%d %H:%M")/g" "$HEARTBEAT_FILE"
-fi
+EOF
 
 # 检查 1: NOW.md 任务状态
 echo "## ✅ 检查结果" >> "$HEARTBEAT_FILE"
