@@ -1,0 +1,46 @@
+name: Duty Check
+on:
+  schedule:
+    # 每天 UTC 01:00 (北京时间 09:00)
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  duty-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 需要写权限以提交 heartbeat
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run Duty Check
+        run: |
+          bash ops/scripts/duty-check.sh
+
+      - name: Commit and Push Heartbeat
+        run: |
+          git add ops/heartbeats/
+          if git diff --staged --quiet; then
+            echo "No new heartbeat to commit"
+          else
+            git commit -m "Auto duty check: $(date +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Report Status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ Duty check completed successfully"
+          else
+            echo "❌ Duty check failed"
+            exit 1
+          fi
