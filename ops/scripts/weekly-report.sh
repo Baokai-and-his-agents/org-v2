@@ -4,35 +4,41 @@
 set -e
 
 REPORT_DATE=$(date +%Y-%m-%d)
-WEEK_AGO=$(date -v-7d +%Y-%m-%d)
 REPORT_FILE="ops/reports/weekly-${REPORT_DATE}.md"
 
 echo "# 本周运行报告" > "$REPORT_FILE"
 echo "" >> "$REPORT_FILE"
 echo "**日期**：$REPORT_DATE" >> "$REPORT_FILE"
-echo "**周期**：$WEEK_AGO ~ $REPORT_DATE" >> "$REPORT_FILE"
+echo "**周期**：最近 7 天" >> "$REPORT_FILE"
+echo "" >> "$REPORT_FILE"
+
+# 任务完成数（通过 git log 分析，使用相对时间）
+echo "## 📊 核心指标" >> "$REPORT_FILE"
+echo "" >> "$REPORT_FILE"
+
+TASKS_DONE=$(git log --since="7 days ago" --grep="Complete\|完成\|Finish" --oneline | wc -l | xargs)
 echo "" >> "$REPORT_FILE"
 
 # 任务完成数（通过 git log 分析）
 echo "## 📊 核心指标" >> "$REPORT_FILE"
 echo "" >> "$REPORT_FILE"
 
-TASKS_DONE=$(git log --since="$WEEK_AGO" --grep="Complete\|完成\|Finish" --oneline | wc -l | xargs)
+TASKS_DONE=$(git log --since="7 days ago" --grep="Complete\|完成\|Finish" --oneline | wc -l | xargs)
 echo "- 完成任务：$TASKS_DONE" >> "$REPORT_FILE"
 
-# 新增能力
-NEW_SKILLS=$(git log --since="$WEEK_AGO" --name-only --pretty=format: -- capabilities/skill/ | grep -v "^$" | wc -l | xargs)
-NEW_DATA=$(git log --since="$WEEK_AGO" --name-only --pretty=format: -- capabilities/data/ | grep -v "^$" | wc -l | xargs)
-NEW_KNOWLEDGE=$(git log --since="$WEEK_AGO" --name-only --pretty=format: -- capabilities/knowledge/ | grep -v "^$" | wc -l | xargs)
+# 新增能力（使用相对时间）
+NEW_SKILLS=$(git log --since="7 days ago" --name-only --pretty=format: -- capabilities/skill/ | grep -v "^$" | wc -l | xargs)
+NEW_DATA=$(git log --since="7 days ago" --name-only --pretty=format: -- capabilities/data/ | grep -v "^$" | wc -l | xargs)
+NEW_KNOWLEDGE=$(git log --since="7 days ago" --name-only --pretty=format: -- capabilities/knowledge/ | grep -v "^$" | wc -l | xargs)
 
 echo "- 新增能力：skill($NEW_SKILLS) + data($NEW_DATA) + knowledge($NEW_KNOWLEDGE)" >> "$REPORT_FILE"
 
-# Heartbeats
-HEARTBEATS=$(find ops/heartbeats/ -name "*.md" -newermt "$WEEK_AGO" 2>/dev/null | wc -l | xargs)
+# Heartbeats（查找最近 7 天的文件）
+HEARTBEATS=$(find ops/heartbeats/ -name "*.md" -mtime -7 2>/dev/null | wc -l | xargs)
 echo "- Duty 巡检：$HEARTBEATS 次" >> "$REPORT_FILE"
 
 # 提交数
-COMMITS=$(git log --since="$WEEK_AGO" --oneline | wc -l | xargs)
+COMMITS=$(git log --since="7 days ago" --oneline | wc -l | xargs)
 echo "- Git 提交：$COMMITS 次" >> "$REPORT_FILE"
 
 echo "" >> "$REPORT_FILE"
