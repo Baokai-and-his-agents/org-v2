@@ -12,9 +12,9 @@
 
 ---
 
-## 📋 活跃任务 (0)
+## 📋 活跃任务 (1)
 
-无
+- [001-bootstrap-validation](ops/tasks/001-bootstrap-validation.md) - 验证系统可用性 [进行中]
 
 ---
 
@@ -27,8 +27,8 @@
 ## 📊 本周进度
 
 - 完成：0
-- 沉淀能力：0
-- Agent 工作时长：0h
+- 沉淀能力：1 (org-bootstrap skill)
+- Agent 工作时长：0.5h
 
 ---
 
