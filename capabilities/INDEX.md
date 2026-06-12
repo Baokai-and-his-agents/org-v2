@@ -9,11 +9,11 @@
 ## 📊 统计
 
 - Skills: 2
-- Data: 0
+- Data: 1
 - Knowledge: 1
 
-**本周新增**：3  
-**本周复用**：2
+**本周新增**：4  
+**本周复用**：3
 
 ---
 
@@ -30,7 +30,7 @@
 
 > 样本、模板、价格表、竞品库
 
-_无_
+- [product-brief-template](data/product-brief-template.md) - 产品 brief 标准模板
 
 ---
 

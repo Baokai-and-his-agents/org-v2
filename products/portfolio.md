@@ -14,9 +14,16 @@
 
 ---
 
-## 📦 当前产品 (0)
+## 📦 当前产品 (1)
 
-_无_
+| 产品 | 阶段 | 客户 | 下一里程碑 | Brief |
+|------|------|------|-----------|-------|
+| AI-Native Org Toolkit | Idea → Validation | 一人公司、小团队 | 内部验证 2 周 | [brief](briefs/ai-native-org-toolkit.md) |
+
+**说明**：
+- org-v2 本身就是第一个产品验证
+- 目标：30 分钟搭建可运行的 AI 原生组织
+- 核心资产：2 个 skills（org-bootstrap, duty-check）+ 自动化脚本
 
 ---
 
