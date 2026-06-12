@@ -10,9 +10,9 @@
 
 - Skills: 1
 - Data: 0
-- Knowledge: 0
+- Knowledge: 1
 
-**本周新增**：1  
+**本周新增**：2  
 **本周复用**：1
 
 ---
@@ -37,7 +37,7 @@ _无_
 
 > 决策依据、失败教训、成功案例
 
-_无_
+- [org-design-decisions](knowledge/org-design-decisions.md) - 从 org-blueprint 学到的组织设计决策
 
 ---
 
