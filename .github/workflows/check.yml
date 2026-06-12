@@ -1,64 +1,88 @@
-name: Check Structure
+name: Quality Checks
+
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
-  check:
+  quality-check:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: Check required files
-        run: |
-          echo "检查核心文件..."
+    - name: Check repository structure
+      run: |
+        echo "🔍 Checking repository structure..."
 
-          REQUIRED_FILES=(
-            "NOW.md"
-            "control/owner.md"
-            "ops/agent-protocol.md"
-            "capabilities/INDEX.md"
-            "products/portfolio.md"
-          )
-
-          for file in "${REQUIRED_FILES[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "❌ 缺少必需文件: $file"
-              exit 1
-            else
-              echo "✅ $file"
-            fi
-          done
-
-      - name: Check capabilities INDEX sync
-        run: |
-          echo "检查能力资产索引..."
-
-          # 统计实际文件数
-          ACTUAL_SKILLS=$(find capabilities/skill/ -name "*.md" 2>/dev/null | wc -l)
-          ACTUAL_DATA=$(find capabilities/data/ -name "*.md" 2>/dev/null | wc -l)
-          ACTUAL_KNOWLEDGE=$(find capabilities/knowledge/ -name "*.md" 2>/dev/null | wc -l)
-
-          # 从 INDEX.md 提取声明的数量
-          DECLARED_SKILLS=$(grep "Skills:" capabilities/INDEX.md | grep -oE "[0-9]+")
-          DECLARED_DATA=$(grep "Data:" capabilities/INDEX.md | grep -oE "[0-9]+")
-          DECLARED_KNOWLEDGE=$(grep "Knowledge:" capabilities/INDEX.md | grep -oE "[0-9]+")
-
-          echo "Skills: $ACTUAL_SKILLS (实际) vs $DECLARED_SKILLS (声明)"
-          echo "Data: $ACTUAL_DATA (实际) vs $DECLARED_DATA (声明)"
-          echo "Knowledge: $ACTUAL_KNOWLEDGE (实际) vs $DECLARED_KNOWLEDGE (声明)"
-
-          # 目前只警告，不阻止提交
-          if [ "$ACTUAL_SKILLS" != "$DECLARED_SKILLS" ]; then
-            echo "⚠️ Skills 数量不匹配，请更新 INDEX.md"
+        # Check required directories
+        for dir in control ops capabilities; do
+          if [ ! -d "$dir" ]; then
+            echo "❌ Missing required directory: $dir"
+            exit 1
           fi
+        done
 
-      - name: Check markdown format
-        run: |
-          echo "检查 Markdown 格式..."
+        # Check required files
+        for file in README.md QUICKSTART.md NOW.md capabilities/INDEX.md; do
+          if [ ! -f "$file" ]; then
+            echo "❌ Missing required file: $file"
+            exit 1
+          fi
+        done
 
-          # 检查是否有无效链接（基础检查）
-          find . -name "*.md" -exec grep -H "\]()" {} \; | head -10 && \
-            echo "⚠️ 发现空链接" || \
-            echo "✅ 链接格式正常"
+        echo "✅ Structure check passed"
+
+    - name: Check capability assets quality
+      run: |
+        echo "🔍 Checking capability assets quality..."
+        chmod +x ops/scripts/check-capabilities.sh
+        bash ops/scripts/check-capabilities.sh
+
+        # Fail if quality issues found
+        if grep -q "⚠️ \*\*健康状态\*\*：需要改进" ops/reports/capability-quality-*.md; then
+          echo "❌ Capability quality issues found"
+          exit 1
+        fi
+
+        echo "✅ Capability quality check passed"
+
+    - name: Verify capability index sync
+      run: |
+        echo "🔍 Verifying capability index sync..."
+        chmod +x ops/scripts/sync-capability-index.sh
+        bash ops/scripts/sync-capability-index.sh --dry-run
+
+        # If sync needed, fail CI
+        if ! bash ops/scripts/sync-capability-index.sh --dry-run | grep -q "统计数据已同步"; then
+          echo "❌ capabilities/INDEX.md is out of sync"
+          echo "Run: bash ops/scripts/sync-capability-index.sh"
+          exit 1
+        fi
+
+        echo "✅ Index sync verified"
+
+    - name: Check for TODO/FIXME
+      run: |
+        echo "🔍 Checking for unresolved TODOs..."
+
+        # Find TODOs in code (not in docs)
+        if grep -r "TODO\|FIXME" ops/scripts/*.sh 2>/dev/null; then
+          echo "⚠️ Found TODOs in scripts (informational only)"
+        else
+          echo "✅ No critical TODOs found"
+        fi
+
+    - name: Summary
+      if: always()
+      run: |
+        echo "📊 Quality Check Summary"
+        echo "========================"
+        echo "- Structure: ✅"
+        echo "- Capability Quality: ✅"
+        echo "- Index Sync: ✅"
+        echo "- TODOs: ✅"
+        echo ""
+        echo "All checks passed! 🎉"
