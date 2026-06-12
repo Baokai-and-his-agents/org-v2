@@ -1,22 +1,88 @@
-# macOS
-.DS_Store
+# org-v2 .gitignore
 
-# Logs (keep structure, ignore large files)
-*.log
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
 
 # Temporary files
 *.tmp
-*.swp
-*~
+*.temp
+*.log
+*.bak
+*.backup
+.~*
 
-# Secrets (if accidentally created)
-.env
-secrets/
-*.key
-*.pem
+# Node.js (if using)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
 
-# Build artifacts (if added later)
-dist/
-build/
-*.pyc
+# Python (if using)
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+.Trash-*
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+
+# Project-specific
+/ops/reports/*.tmp
+/ops/logs/*.log
+.env.local
+.env.*.local
+
+# Test outputs
+/test-results/
+/coverage/
+
+# Build artifacts (if any)
+/dist/
+/build/
+
+# Private/sensitive files
+*.private
+*.secret
+.secrets/
+credentials/
+
+# Backup files
+*.orig
+
+# Cache
+.cache/
+*.cache
