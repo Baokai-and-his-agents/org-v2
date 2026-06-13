@@ -222,6 +222,7 @@ _Last update: 2026-06-12_
 
 ## 📚 文档
 
+- [项目概览](docs/PROJECT_OVERVIEW.md) - 可视化架构和指标 🎨
 - [快速开始](QUICKSTART.md) - 10 分钟上手指南
 - [工具指南](docs/TOOLS_GUIDE.md) - 13 个工具完整文档
 - [常见问题](FAQ.md) - 40+ 问答
