@@ -2,8 +2,8 @@
 
 ![Status](https://img.shields.io/badge/status-production--ready++-success)
 ![Version](https://img.shields.io/badge/version-0.9.0-blue)
-![Tasks](https://img.shields.io/badge/tasks-116%20complete-blue)
-![Capabilities](https://img.shields.io/badge/capabilities-40%20deposited-blue)
+![Tasks](https://img.shields.io/badge/tasks-124%20complete-blue)
+![Capabilities](https://img.shields.io/badge/capabilities-41%20deposited-blue)
 ![Tests](https://img.shields.io/badge/tests-42%20passing-success)
 ![Health](https://img.shields.io/badge/health-8.9%2F10-success)
 ![Completeness](https://img.shields.io/badge/completeness-95%25-success)
