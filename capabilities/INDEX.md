@@ -17,9 +17,13 @@
 
 **目标达成**：40/35+ (114%) ✅
 
+**最后验证**：2026-06-13（任务 094）
+
 ---
 
 ## 🔧 Skills（工作方法）
+
+> 可重复执行的流程、检查清单、脚本
 
 1. [org-bootstrap](skill/org-bootstrap.md) - 从零搭建 AI 原生组织
 2. [duty-check](skill/duty-check.md) - Duty Agent 定期巡检
@@ -42,6 +46,8 @@
 
 ## 📚 Data（结构化事实）
 
+> 样本、模板、价格表、竞品库
+
 1. [product-brief-template](data/product-brief-template.md) - 产品 brief 模板
 2. [contributing-guide-template](data/contributing-guide-template.md) - 贡献指南模板
 3. [roadmap-template](data/roadmap-template.md) - 产品路线图模板
@@ -52,6 +58,8 @@
 ---
 
 ## 💡 Knowledge（经验案例）
+
+> 决策依据、失败教训、成功案例
 
 1. [org-design-decisions](knowledge/org-design-decisions.md) - 组织设计决策
 2. [cross-platform-bash-compatibility](knowledge/cross-platform-bash-compatibility.md) - Bash 跨平台兼容
@@ -73,34 +81,68 @@
 
 ## 🏗️ System（系统设计）
 
+> 架构设计、系统模式
+
 1. [health-scoring-system](system/health-scoring-system.md) - 8 维度健康度评分系统
 2. [quality-check-pipeline](system/quality-check-pipeline.md) - CI/CD 质量检查流水线
 3. [capability-management-architecture](system/capability-management-architecture.md) - 能力管理系统架构
 
 ---
 
-## 🆕 自主迭代新增（任务 051-069）
+## 🔗 工具支持
 
-**Phase 5+ 完整列表**（2026-06-13）：
+### 查找能力
+```bash
+# 搜索关键词
+bash ops/scripts/search-capability.sh "testing"
 
-**Skills (3)**:
-- unit-testing-framework (051)
-- monthly-report-automation (061-062)
-- capability-analytics (067-069)
+# 查看依赖
+bash ops/scripts/capability-dependencies.sh
+```
 
-**Knowledge (4)**:
-- autonomous-iteration-strategy (052)
-- self-learning-mechanism (056)
-- community-example-patterns (060)
-- github-actions-cicd-setup (064)
+### 导入导出
+```bash
+# 导出能力
+bash ops/scripts/export-capability.sh -t skill -n <name> -o <file>
 
-**Total**: +7 新能力
+# 导入能力
+bash ops/scripts/import-capability.sh -f <file>
+```
 
-**演进**: 15 → 40 (+25, +167%)
+### 质量检查
+```bash
+# 检查所有能力
+bash ops/scripts/check-capabilities.sh
+
+# 查看使用统计
+bash ops/scripts/capability-usage-stats.sh
+```
+
+📖 详细文档：[工具指南](../docs/TOOLS_GUIDE.md) | [快速参考](../docs/TOOLS_QUICK_REFERENCE.md)
 
 ---
 
-## 📈 完整演进历史
+## 📝 添加新能力资产
+
+1. 在对应目录创建文件
+2. 使用统一格式（见 `capabilities/TEMPLATE.md`）
+3. 更新本索引文件
+4. 提交 commit：`Add capability: <name>`
+
+---
+
+## 🗑️ 清理规则
+
+**每月检查**：
+- 3 个月未使用 → 标记为 deprecated
+- 6 个月未使用 → 移到 archive/
+- 明确过时 → 直接删除
+
+记录删除原因到 `capabilities/CHANGELOG.md`
+
+---
+
+## 📈 能力演进历史
 
 | Phase | 新增 | 累计 | 备注 |
 |-------|------|------|------|
@@ -108,10 +150,43 @@
 | 3 | +5 | 15 | 生产就绪 |
 | 4 | 0 | 15 | 优化期 |
 | 5 | +20 | 35 | 任务 053 冲刺 |
-| 5+ | +5 | 40 | 自主迭代 |
+| 5+ | +5 | 40 | 自主迭代 (任务 056-069) |
+
+**增长率**：+300% (10 → 40)
+
+**时间跨度**：8 天 (2026-06-05 → 2026-06-13)
+
+**平均速度**：3.75 个能力/天
 
 ---
 
-_最后更新：2026-06-13_  
+## 🎯 核心能力（最多被引用）
+
+根据依赖分析 (任务 068)：
+
+1. **problem-driven-development** (3 次引用)
+2. **health-score-calculator** (3 次引用)
+3. **unit-testing-framework** (2 次引用)
+4. **quality-check-automation** (2 次引用)
+5. **milestone-review-process** (2 次引用)
+
+💡 这些是知识图谱的核心节点，优先维护和改进
+
+---
+
+## 🌍 社区示例
+
+查看 [社区能力示例](../docs/examples/community-capabilities/) 了解真实使用场景：
+
+1. API 开发工作流
+2. 数据库迁移工作流
+3. 代码审查检查清单
+4. 测试策略
+5. 文档编写工作流
+
+---
+
+_最后更新：2026-06-13 (任务 095)_  
 _40/35+ 目标达成 (114%) 🎊_  
-_19 个任务自主迭代完成_
+_系统健康度：9.5/10_  
+_持续自主迭代中..._
