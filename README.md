@@ -2,11 +2,12 @@
 
 ![Status](https://img.shields.io/badge/status-production--ready++-success)
 ![Version](https://img.shields.io/badge/version-0.9.0-blue)
-![Tasks](https://img.shields.io/badge/tasks-100%20complete-blue)
+![Tasks](https://img.shields.io/badge/tasks-116%20complete-blue)
 ![Capabilities](https://img.shields.io/badge/capabilities-40%20deposited-blue)
 ![Tests](https://img.shields.io/badge/tests-42%20passing-success)
-![Health](https://img.shields.io/badge/health-9.5%2F10-success)
-![Quality](https://img.shields.io/badge/quality-100%25-success)
+![Health](https://img.shields.io/badge/health-8.9%2F10-success)
+![Completeness](https://img.shields.io/badge/completeness-95%25-success)
+![Tools](https://img.shields.io/badge/tools-20%20ready-success)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 [![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-purple)](CODE_OF_CONDUCT.md)
