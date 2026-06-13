@@ -1,6 +1,6 @@
 # 工具快速参考
 
-13 个工具的速查表，快速找到需要的命令。
+17 个工具的速查表，快速找到需要的命令。
 
 ---
 
@@ -24,6 +24,9 @@ bash ops/scripts/capability-usage-stats.sh
 
 # 依赖分析
 bash ops/scripts/capability-dependencies.sh
+
+# 使用热力图
+bash ops/scripts/capability-heatmap.sh
 ```
 
 ---
@@ -37,11 +40,20 @@ bash ops/scripts/generate-weekly-report.sh
 # 月报（最近 30 天）
 bash ops/scripts/generate-monthly-report.sh
 
+# 统计报告
+bash ops/scripts/generate-stats-report.sh
+
 # 健康度评分（8 维度）
 bash ops/scripts/calculate-health-score.sh
 
 # 日常巡检
 bash ops/scripts/duty-check.sh
+
+# 贡献统计
+bash ops/scripts/contributor-stats.sh
+
+# 发布准备检查
+bash ops/scripts/check-release-readiness.sh
 ```
 
 ---
@@ -73,12 +85,31 @@ bash ops/scripts/calculate-health-score.sh
 ```bash
 bash ops/scripts/generate-weekly-report.sh
 bash ops/scripts/capability-usage-stats.sh
+bash ops/scripts/contributor-stats.sh
+```
+
+### 发布前检查
+```bash
+bash ops/scripts/check-release-readiness.sh
+bash ops/scripts/generate-stats-report.sh
 ```
 
 ### 提交前验证
 ```bash
 bash ops/scripts/check-capabilities.sh
 bash ops/tests/test-capability-quality.sh
+```
+
+### 能力分析
+```bash
+# 查看使用情况
+bash ops/scripts/capability-usage-stats.sh
+
+# 查看依赖关系
+bash ops/scripts/capability-dependencies.sh
+
+# 查看热力图
+bash ops/scripts/capability-heatmap.sh
 ```
 
 ### 能力分享
