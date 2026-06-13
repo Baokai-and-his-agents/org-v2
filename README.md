@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/status-production--ready++-success)
 ![Version](https://img.shields.io/badge/version-0.9.0-blue)
-![Tasks](https://img.shields.io/badge/tasks-75%20complete-blue)
+![Tasks](https://img.shields.io/badge/tasks-92%20complete-blue)
 ![Capabilities](https://img.shields.io/badge/capabilities-40%20deposited-blue)
 ![Tests](https://img.shields.io/badge/tests-42%20passing-success)
 ![Health](https://img.shields.io/badge/health-9.5%2F10-success)
@@ -223,10 +223,12 @@ _Last update: 2026-06-12_
 ## 📚 文档
 
 - [快速开始](QUICKSTART.md) - 10 分钟上手指南
+- [工具指南](docs/TOOLS_GUIDE.md) - 13 个工具完整文档
 - [常见问题](FAQ.md) - 40+ 问答
 - [最佳实践](docs/BEST_PRACTICES.md) - 使用建议
 - [故障排查](docs/TROUBLESHOOTING.md) - 问题解决
 - [进阶教程](docs/ADVANCED.md) - 深入使用
+- [社区示例](docs/examples/community-capabilities/) - 5 个真实场景
 - [变更日志](CHANGELOG.md) - 版本历史
 
 ---
