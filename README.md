@@ -28,6 +28,10 @@
 ```bash
 git clone https://github.com/Baokai-and-his-agents/org-v2.git my-org
 cd my-org
+bash ops/scripts/init-guide.sh  # 查看初始化指导
+cat QUICKSTART.md  # 阅读 10 分钟指南
+bash ops/scripts/duty-check.sh  # 运行第一次巡检
+```
 cat QUICKSTART.md  # 阅读 10 分钟指南
 bash ops/scripts/duty-check.sh  # 运行第一次巡检
 ```
