@@ -229,12 +229,13 @@ _Last update: 2026-06-12_
 
 - [项目概览](docs/PROJECT_OVERVIEW.md) - 可视化架构和指标 🎨
 - [快速开始](QUICKSTART.md) - 10 分钟上手指南
-- [工具指南](docs/TOOLS_GUIDE.md) - 13 个工具完整文档
+- [工具指南](docs/TOOLS_GUIDE.md) - 20 个工具完整文档
 - [常见问题](FAQ.md) - 40+ 问答
 - [最佳实践](docs/BEST_PRACTICES.md) - 使用建议
 - [故障排查](docs/TROUBLESHOOTING.md) - 问题解决
 - [进阶教程](docs/ADVANCED.md) - 深入使用
 - [社区示例](docs/examples/community-capabilities/) - 5 个真实场景
+- [项目路线图](docs/ROADMAP.md) - 未来规划 🗺️
 - [变更日志](CHANGELOG.md) - 版本历史
 
 ---
